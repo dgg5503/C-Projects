@@ -1,0 +1,41 @@
+commit cb555c25fbd45dfb1c1e37ca20a6fc089e1e9213
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 01:04:54 2016 -0400
+
+    added some nice comments :)
+
+commit 65cb32cb4034f1258b19ff5f25bb324c86a1437c
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 00:53:16 2016 -0400
+
+    more try tweaks
+
+commit fcc2572fa2ce946767d537818b8ccdbc6799ddca
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 00:51:09 2016 -0400
+
+    added a 0 file length check
+
+commit d55839db1891922f2838e5dda459e86fb80eb8e6
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 00:47:36 2016 -0400
+
+    try correction
+
+commit b7c719a1f8b857acf8208278e09442ed8511d040
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 00:45:31 2016 -0400
+
+    fixed incorrect display of IPs
+
+commit f5d896a45b003c89e49727a520d88b3bd08aac16
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Sat Apr 23 00:40:27 2016 -0400
+
+    possibly all done:
+
+commit f3e043bf8ad2526308e8c678882caf41b0cf8342
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 22 21:15:15 2016 -0400
+
+    inital commit

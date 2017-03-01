@@ -1,0 +1,23 @@
+commit bcea48b4720ce51cda42dbf62c5950216e125295
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 5 21:43:36 2016 -0500
+
+    completed document header comments
+
+commit 829d64c69732d7ff39d88a0a7ba54f6591807b8c
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 5 21:36:04 2016 -0500
+
+    more code formatting!
+
+commit f87adc7fad8f41b421b81be9e53d155aec1c0368
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 5 21:32:23 2016 -0500
+
+    formatted comments
+
+commit 652676a7592403ce8a1bb859b8717c4d499b4e3a
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 5 21:27:44 2016 -0500
+
+    inital and final commit

@@ -1,0 +1,41 @@
+commit 851dfaf60ffaf25aeef1784d7787f244e1b8dd48
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue May 3 20:40:39 2016 -0400
+
+    conformed to standards of pthread
+
+commit 1e41deed782c186d8843fe8c5eb011b427da1976
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 23:35:15 2016 -0400
+
+    dispersed utils around
+
+commit 829b145d68e15311e21b6ff3f417090d50dcb132
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 23:31:26 2016 -0400
+
+    threading added
+
+commit f4a0a365a404138ed3cd2ec101dfc7f971517c2f
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 20:39:55 2016 -0400
+
+    number parsing done!
+
+commit 742da64e6439a01facdda9ed8c63293fe7f19acd
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 19:25:20 2016 -0400
+
+    added correct initial optional number parsing
+
+commit 674241677447740b62dff660f87c95522f702798
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 19:06:37 2016 -0400
+
+    make and destroy racers works!
+
+commit 2fd5f33f934df8531be414e05a9cf72466db9912
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Fri Apr 29 17:51:31 2016 -0400
+
+    initial commit

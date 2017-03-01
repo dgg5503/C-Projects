@@ -1,0 +1,29 @@
+commit 6abf583368e120a61f8d3182ea096f6c1e1faa28
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 18:54:12 2016 -0500
+
+    conway algos should actually work now
+
+commit f4ed439b81a2a037da1dd58bac046a9bb8606107
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 11:40:12 2016 -0500
+
+    refactored code and documented
+
+commit 3b9954f5add4dfd9f29d6895753ae9bd30313dee
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:39:53 2016 -0500
+
+    fixed some typos and removed unusued vars.
+
+commit 7552476a4c1dffe93553454998ce297931da3b6e
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:28:27 2016 -0500
+
+    replaced useless equality comparisons with intended assign symbol.
+
+commit e17454b0cf39f99223bede0ffdbe3561e2b99ebe
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:19:15 2016 -0500
+
+    program no longer seg faults :D!

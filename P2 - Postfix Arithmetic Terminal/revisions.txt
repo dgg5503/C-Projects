@@ -1,0 +1,155 @@
+commit 2093ace0db4ea2da37f894f445b8dbbf87c61fd1
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Thu Apr 7 11:50:24 2016 -0400
+
+    fixed error checking a bit more, kind of hacky but with my current implementation its the best i can get
+
+commit b1c3bbcc49cf4c6d4acfaea58df835d4b9943c2a
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 22:14:33 2016 -0400
+
+    hopefully commit final
+
+commit 9dc630681d784e39449320b4b848117efc2124c4
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:56:49 2016 -0400
+
+    more try tweaks
+
+commit 536a3e199f7aa2e12823c69a10e0310caaf18896
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:55:05 2016 -0400
+
+    more try tweaks
+
+commit d41dc4d81e324c312c9264a1b860c3f3cadecb34
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:53:18 2016 -0400
+
+    more try tweaks
+
+commit d3c5960902effbf5ff9ee3447d10a274846e9d03
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:48:35 2016 -0400
+
+    more minor tweaks for try
+
+commit 4dd41baf10e4805f498d10a23e2b94ccb28bed1e
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:19:44 2016 -0400
+
+    more try checks
+
+commit 3a5ab95eb694d5e37d50061a730e2bc73e62ef3b
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:13:40 2016 -0400
+
+    more minor changes
+
+commit 78f8eece2d24f769b6f3645df41bfe28dacfb98d
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Wed Apr 6 21:11:00 2016 -0400
+
+    minor fixed for try
+
+commit f8d90e4f4b00229a8b0aad9075fd228069f60f3a
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 21:05:58 2016 -0400
+
+    fixed line input
+
+commit 69b59dfe345d15bb06cb21e1a8f5b1002076f570
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 20:51:08 2016 -0400
+
+    updated error checking...
+
+commit 4659da19a726de36df83224392475a69efec36cd
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 20:35:50 2016 -0400
+
+    added extern var for parser error info
+
+commit 7aa36cabe77736cf2a626323afc83da2272a680c
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 19:39:19 2016 -0400
+
+    PARSER COMPLETE, finishing touches now
+
+commit dec053eb8cade8be382de257c7a74699469d3720
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 18:44:24 2016 -0400
+
+    need to fix not enough token error, otherwise nearly done
+
+commit 39d3211e733b7f63adc128eb45d80fe126130c2c
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 16:56:18 2016 -0400
+
+    going to make new stack every parse tree
+
+commit b27f410dc74e45a06529b4a98aca4d0636804f0b
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 16:33:11 2016 -0400
+
+    kinda words
+
+commit dc8c46f28a437b10628605ab77361cd9f7026db9
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 16:03:38 2016 -0400
+
+    parser still broken...
+
+commit d04121abf63a65a4eb32ea6d88ea2a7803aa7367
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Wed Apr 6 14:20:46 2016 -0400
+
+    before fixed parser
+
+commit 2140865fc46dfd3fb0705c08474836738b146836
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Tue Apr 5 17:07:12 2016 -0400
+
+    parse function almost complete, just need to finish assign. need to comment and add error checks for functions in other files
+
+commit 4fdd75466131cb9d1f3a6e19d9d8ec330cd1d6ba
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Tue Apr 5 11:50:21 2016 -0400
+
+    parse tree works but not implemented to catch errors correctly. will ask about this
+
+commit 8cc160716afd3ac12901666dae4a282d063b9df0
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Apr 4 22:07:50 2016 -0400
+
+    added better output to infix tree
+
+commit 063e6f7fb9e2b286da8c74f3cc18e79b34f44863
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Apr 4 21:59:31 2016 -0400
+
+    half way done with parse tree, up next is evaluation!
+
+commit bbe8bf6ca296262b52a7160ae98da46b05a38f88
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Apr 4 21:10:59 2016 -0400
+
+    finished makeExpNode starting parse
+
+commit aeee5bf0d085aacfdf87cb571fa3a5fb22cda4c0
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Tue Mar 29 21:48:22 2016 -0400
+
+    looking into methods of input, have a working one in place right now!
+
+commit 844570297d3019d8ff48fa9f2acf8b0d8e287407
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Tue Mar 15 21:56:42 2016 -0400
+
+    symtab can read from sym.1 and add data to symtab. can also now print the table.
+
+commit 8c76034b7f930124a0a15b1fb78ba1be0f8855e7
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Mar 11 12:11:33 2016 -0500
+
+    stack data structure complete

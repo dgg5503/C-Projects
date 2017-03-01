@@ -1,0 +1,20 @@
+{
+        <pthread_create>
+        Memcheck:Leak
+        ...
+        fun:pthread_create@@GLIBC_2.2.5
+}
+{
+        <start_thread>
+        Memcheck:Leak
+        ...
+        fun:start_thread
+}
+{
+   <pthread_cancel>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   fun:pthread_cancel
+}
+

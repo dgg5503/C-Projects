@@ -1,0 +1,53 @@
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /home/stu13/s10/dgg5503/Courses/CS243/Homeworks/hw3/act1/good-life
+
+        ..Welcome to the Game of life..
+
+Please enter the initial number of organisms: 123
+
+Breakpoint 3, main () at good-life.c:176
+176                                       printf("%s", life[row][col]);
+(gdb) info break
+Num     Type           Disp Enb Address            What
+3       breakpoint     keep y   0x0000000000400eb6 in main at good-life.c:176
+        breakpoint already hit 1 time
+(gdb) display row
+1: row = 0
+(gdb) display col
+2: col = 0
+(gdb) whatis life
+type = char [20][20]
+(gdb) display life[row][col]
+3: life[row][col] = -88 '\250'
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /home/stu13/s10/dgg5503/Courses/CS243/Homeworks/hw3/act1/good-life
+
+        ..Welcome to the Game of life..
+
+Please enter the initial number of organisms: 123
+
+Breakpoint 3, main () at good-life.c:176
+176                                       printf("%s", life[row][col]);
+3: life[row][col] = -88 '\250'
+2: col = 0
+1: row = 0
+(gdb) next
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff7a60a03 in _IO_vfprintf_internal (s=<optimized out>, format=<optimized out>, ap=ap@entry=0x7fffffffe598)
+    at vfprintf.c:1661
+1661    vfprintf.c: No such file or directory.
+(gdb)
+
+Description & Cause:
+Attempting to print a string (%s) in printf when the program is providing a character from the matrix "life." This occurs once on line 176 and another time on line 189. Replaced %s with %c.

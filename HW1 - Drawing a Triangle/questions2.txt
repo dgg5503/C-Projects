@@ -1,0 +1,21 @@
+Lab 1: System Intro
+Activity 2: questions2.txt, main/circle code : 30 points total
+Name: Douglas Gliner
+
+8. Given the program files main.c, circle.h and circle.c:
+
+    a.) What commands will compile the source files into object files?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        gcc -std=c99 -Wall -Wextra -pedantic -c main.c
+        gcc -std=c99 -Wall -Wextra -pedantic -c circle.c
+        
+    b.) What command will link the object files into an executable named broken?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        gcc -std=c99 -Wall -Wextra -pedantic main.o circle.o -o broken
+        
+    c.) Why does the program compile but fail to link?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        The program compiles since, independently, both C files contain valid syntax. The header file for circle defines "getAreas" instead of "getArea" which is not considered an error when compiling circle.c by itself, however, when linking main and circle, main is looking for the function "getArea" but the header file has "getAreas" which is not defined in circle.c resulting in a failure to link.

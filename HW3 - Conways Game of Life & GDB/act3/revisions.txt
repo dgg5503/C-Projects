@@ -1,0 +1,47 @@
+commit 671451099b4e7b1720690f32cf0701994ab8d29b
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 20:53:33 2016 -0500
+
+    formatting...
+
+commit f6863dd48effbfbcf4814d7d2be74785fe8551ab
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 20:51:19 2016 -0500
+
+    added template system for different types of special organisms, added 5% chance of single cell random birth, added params for size of matrix
+
+commit 228865f7a41facc183c12102e61454e7c9dcb23e
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 19:18:24 2016 -0500
+
+    finished console cursor stuff, going for the extra credit!
+
+commit 6abf583368e120a61f8d3182ea096f6c1e1faa28
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 18:54:12 2016 -0500
+
+    conway algos should actually work now
+
+commit f4ed439b81a2a037da1dd58bac046a9bb8606107
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Fri Feb 12 11:40:12 2016 -0500
+
+    refactored code and documented
+
+commit 3b9954f5add4dfd9f29d6895753ae9bd30313dee
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:39:53 2016 -0500
+
+    fixed some typos and removed unusued vars.
+
+commit 7552476a4c1dffe93553454998ce297931da3b6e
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:28:27 2016 -0500
+
+    replaced useless equality comparisons with intended assign symbol.
+
+commit e17454b0cf39f99223bede0ffdbe3561e2b99ebe
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:19:15 2016 -0500
+
+    program no longer seg faults :D!

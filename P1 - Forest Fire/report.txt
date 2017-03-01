@@ -1,0 +1,65 @@
+Assignment Report
+Assignment name is: Wildfire
+My name is: 			Douglas Gliner
+My login ID is:			dgg5503
+
+[insert your answers after the question and add more lines as needed.]
+
+	[MAKE YOUR ANSWERS SHORT AND TO THE POINT. BULLET POINTS ARE GOOD.]
+
+	[USE PLAIN TEXT]
+
+============= PROGRAM STATUS ==============
+
+What is the status of the program?
+
+[e.g. does it run correctly or crash, infinite loop when it should not, other?]
+
+The program runs as expected.
+
+
+
+============= PROGRAM USAGE AND OPTIONS ==
+
+If you implemented anything special, describe your experiment results here.
+
+[see the assignment writeup for details if this applies to your work.]
+
+For the get_neighbors function, I return a struct containing an array of
+pointers to the location of the neighbors in the given matrix which decreases
+total memory use as oppposed to making a copy of the neighbors.
+
+
+============= GENERAL PROJECT FEEDBACK ==============
+
+What did I learn?
+I learned how to create an array of pointers and utilize them later on in the
+program. I also learned how to implement optional arguments which was cool!
+
+
+
+What was easy about this assignment?
+Nothing in this assignment was easy but nothing was too hard either.
+
+
+
+What gave you problems or troubles?
+Designing the program to be dynamic and at the same time logical without
+having to allocate memory!
+Very nervous about what is or isnt considered good style in C. I would've
+rather had a struct passed by reference into the get_neighbors function
+and then just modify that one instead of returning a new one every time but 
+I'm afraid that would be considered bad style...
+
+
+What would you like the instructor to do to improve this assignment?
+Make output samples identical to the output required by "try."
+Clarify directions, especially with what is and isnt a neighbor...
+Clarify extra credit, how is the fire suppose to react to a given windspeed?
+Is the windspeed and direction argument an integer??? whats the range?
+
+
+
+What would you have liked to do in this assignment?
+Work more with pointers because I really like pointers.
+

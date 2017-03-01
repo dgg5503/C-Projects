@@ -1,0 +1,65 @@
+Lab 1: System Intro
+Activity 1: questions1.txt, warning.c : 30 points total
+Name: Douglas Gliner
+
+1. When you first log in, what is the absolute path of your home directory?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    /home/stu13/s10/dgg5503
+    
+2. What command will display the contents of your current
+working directory, so that it shows the difference between
+files and directories?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    ls -F
+    
+3. What command would you use to change your working directory from
+your home directory to the existing subdirectory Courses/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    cd Courses
+    
+4. Within the Courses/ subdirectory, what command would you use to
+create the subdirectory csci243/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    mkdir csci243
+    
+5. When warning.c is compiled as: 
+        gcc -c warning.c
+    There is no indication of any warnings/problems.
+    
+    a.) What compiler flag is used to enable the display of warnings?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        -Wall -Wextra -pedantic
+    
+    b.) In your own words, explain all warnings from compiling warning.c.
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        - Main requires either 0 (void) or 2 arguments (int argc, char *argv[]).
+        - The variable b in the function compute is never used after computing a * 5.
+        - x is defined and never used within the program
+        - argc parameter in the main function is defined and never used within the program
+        - The function compute is of type "int" but does not return anything!
+    
+    c.) Fix warning.c so it compiles without warning and runs correctly.
+
+	(Your answer is the submitted code.)
+
+6. What compiler flag compiles C programs using the ISO C99 standard?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+   -std=c99
+   
+7. Put the four steps of compilation process into their proper order from
+first to last.
+
+    A. Link
+    B. Assemble
+    C. Preprocess
+    D. Compile
+    
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    C, D, B, A

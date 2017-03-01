@@ -1,0 +1,53 @@
+commit 085b3c28f57fb8050dad018908f9df4ffe9070a9
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 21:51:50 2016 -0400
+
+    hopefully final commit
+
+commit 796beb693ee2ad09ae3e582bf4c75b3f5feef530
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 21:31:11 2016 -0400
+
+    implemented correct entry removal
+
+commit 68337386008ceef6059466d9f0f31096ea03d5c0
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 17:54:17 2016 -0400
+
+    added important checks in key lookup
+
+commit f1296153b178981c5477a8e3b25964c769d16f31
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 17:38:05 2016 -0400
+
+    added an extra map empty check
+
+commit 351470ddf71efadf95c110a37a81497ec2e43e07
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 17:33:57 2016 -0400
+
+    ready for try
+
+commit 290587c2c0645de1da127755fc344571629449f4
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 17:07:07 2016 -0400
+
+    solved valgrind errors
+
+commit 15ab514d04c5ffb7c203d320a47149d24b4a4536
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 16:22:44 2016 -0400
+
+    nearly done fixing valgrind errors
+
+commit d305444eb666897216d831bb7dfbc5f88b977cf8
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 14:40:56 2016 -0400
+
+    implemented all functions, working to debug valgrind errors
+
+commit de901af215c53f621ebabfb275ea2c6fc837dabb
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 12 12:10:18 2016 -0400
+
+    initial commit

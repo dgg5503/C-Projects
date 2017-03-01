@@ -1,0 +1,59 @@
+commit 94a0e15c439543ba3dcf9740f2b8466f0e212aae
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue May 10 01:36:06 2016 -0400
+
+    small try fix
+
+commit 3701bcdbf4dba67bfb233647aa0fd9348e097f3f
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue May 10 01:32:07 2016 -0400
+
+    added both extra credit options and readme
+
+commit 8412d3917a6533380ad338cfbdf09219c9027c4a
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Mon May 9 22:19:57 2016 -0400
+
+    comment cleanup
+
+commit 1988157d6eabd9ea4499684a27091f4584a6d8cf
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Mon May 9 22:01:27 2016 -0400
+
+    try tweaks
+
+commit 5ac47a961e4aa9c9ca988ae90180e9e8c7232ddb
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Mon May 9 21:56:12 2016 -0400
+
+    fixed some dependencies
+
+commit f8fe3d0e81616aabd413590101b92687e1c91b90
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Mon May 9 21:54:52 2016 -0400
+
+    base project seems complete, submitting for testing
+
+commit 1d2555ff0e1f3042a404b7852dd653e2ae6d3b80
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Mon May 9 16:51:17 2016 -0400
+
+    finished filter functions, moving on to threading
+
+commit 61de83f8591b4d63b75357439b0dc2b86a27218d
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue May 3 22:40:38 2016 -0400
+
+    realized that functions existed to add ip and tcp ports.......... also filled in blockIP and blockTCP
+
+commit 16670083e94ec0f0f4ae21f0760368933804b812
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue May 3 22:39:09 2016 -0400
+
+    realized that functions existed to add ip and tcp ports.......... also filled in blockIP and blockTCP
+
+commit c642fa0131b547ffe59f32fc907d60ab1d50cb26
+Author: Douglas Gerard Gliner <you@example.com>
+Date:   Tue Apr 26 23:09:35 2016 -0400
+
+    created generic linked list for file io

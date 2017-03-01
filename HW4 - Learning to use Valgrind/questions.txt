@@ -1,0 +1,316 @@
+Homework 4, Activity 1:  Learning to use Valgrind
+
+Name: Douglas Gliner
+
+Instructions
+------------
+
+These questions deal with the movie program found in movie.c, mtime.c and
+movietest.c.  Compile these files as indicated in the assignment writeup.
+
+We have included a compiled copy of the solution "goodmovietest" for you
+to run to see how the program should behave.
+
+The nature of these activities will have you switching back and forth
+between running valgrind and looking at code. You may find it helpful to
+have a second shell window open; run valgrind in the first window, and 
+execute other commands (such as 'more', or an editor) in the second window.
+
+Questions
+---------
+
+1. Run "movietest" and observe its behavior
+
+   a. When movietest is run, what error is reported?
+
+******************** Your answer below (5 points) ********************
+    Running movietest from the console returns the following error: *** Error
+    in `./movietest': double free or corruption (out): 0x00000000020a5020 ***
+    Aborted (core dumped).
+    
+    Running it from GDB returns the following error: Program received signal
+    SIGABRT, Aborted. 0x00007ffff7a4bcc9 in __GI_raise (sig=sig@entry=6) at
+    ../nptl/sysdeps/unix/sysv/linux/raise.c:56
+    56 ../nptl/sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+***********************************************************
+
+   b. Is the behavior of movietest consistent, if you run it multiple
+      times (e.g. 5 times) does it result in the same error each time?
+
+******************** Your answer below (5 points) ********************
+    When running it multiple times through GDB, the error message is consistent
+    However, when running the program multiple times outside of GDB, memory
+    address referred by the error changes every time.
+    
+***********************************************************
+
+   c. Explain what a "double free or corruption" error message likely
+      means. That is to say, when discussing dynamic memory management
+      what does "double free" mean and why is it a problem?
+
+******************** Your answer below (5 points) ********************
+    Double free probably means that the program is trying to free allocated
+    memory from a given pointer twice. Obviously, you would only want to free
+    memory once from a given pointer since once its freed, there is nothing
+    left to free! Attempting to free memory at that location would result in 
+    undesirable behavior.
+
+***********************************************************
+
+2. Use gdb to begin to investigate the error
+
+   a. Run movietest in gdb. Look at the backtrace. It should show
+      several frames of C library files followed by 2 frames in
+      the movietest application. Copy and paste the last two lines 
+      of the backtrace here:
+
+******************** Your answer below (5 points) ********************
+    #5  0x0000000000400cb7 in movieDelete (m=0x6030c0) at movie.c:60
+    #6  0x0000000000400b7e in main () at movietest.c:118
+
+
+**********************************************************
+
+   b. When the error occurs, what line of code was executing in 
+      movie.c?
+
+******************** Your answer below (5 points) ********************
+    Line 60 / free(m->director) ;
+    
+**********************************************************
+
+   c. When the error occurs, what line of code was executing in
+      movietest.c?
+
+******************** Your answer below (5 points) ********************
+    Line 118 / movieDelete( movie3 ) ;
+    
+**********************************************************
+
+   d. Select the stack frame pertaining to movie.c and then run the 
+      "list" command to examine the source code around the line of 
+      code where the error occurred. Copy and paste the result of
+      running list here:
+
+******************** Your answer below (5 points) ********************
+    55      // Name:        (destructor)
+    56      //
+    57      void movieDelete(movie *m)
+    58      {
+    59          //director
+    60          free(m->director) ;
+    61          //title
+    62          free(m->title) ;
+    63          //time
+    64          if(NULL != m->lastPlayed)
+
+**********************************************************
+      
+3. Run "movietest" using the valgrind command:
+      valgrind --leak-check=full movietest
+   Look at the summary information at the end of the valgrind output.
+
+   a. How many bytes of memory are reported lost?
+
+******************** Your answer below (5 points) ********************
+    500 bytes in 12 blocks
+    
+***********************************************************
+
+   b. How many bytes of memory are still in use when the program exited?
+
+******************** Your answer below (5 points) ********************
+    500 bytes in 12 blocks
+    
+***********************************************************
+
+   c. How many allocation and deallocation calls were made?
+
+******************** Your answer below (5 points) ********************
+    59 allocations
+    49 deallocations
+    
+***********************************************************
+
+4. The output from valgrind indicates many different errors, but most
+   are caused by the same statements in the program being executed
+   again and again.
+
+   a. List all the different types of errors reported by valgrind, and
+      how many times each occurred.  Consider only messages printed
+      before the summary of heap usage.
+
+******************** Your answer below (5 points) ********************
+    Invalid write of size 1 occured 8 times
+    Invalid read of size 1 occured 22 times
+    Invalid free() / delete / delete[] / realloc() occured 2 times
+
+***********************************************************
+
+   b. At what lines in the source file are the memory blocks being
+      allocated?
+
+******************** Your answer below (5 points) ********************
+    Captured by Valgrind:
+        movie.c:148
+        movie.c:108
+        movie.c:105
+        movie.c:103
+        movie.c:41
+    
+    Other found in source:
+        movie.c:43
+        movie.c:46
+        movie.c:71
+        movie.c:79
+        movietest.c:72
+        movietest.c:73
+        mtime.c:23
+        mtime.c:24
+        mtime.c:47
+        mtime.c:68
+        mtime.c:72
+        mtime.c:122
+    
+***********************************************************
+
+   c. At what lines in the source file are the invalid read and write
+      accesses to the memory blocks occurring?
+
+******************** Your answer below (5 points) ********************
+    Invalid read:
+        movie.c:23
+        movie.c:24
+        movie.c:71
+        movie.c:72
+        movie.c:79
+        movie.c:80
+        movie.c:106
+        movie.c:109
+        
+    Invalid write:
+        movie.c:106
+        movie.c:109
+        
+        
+***********************************************************
+
+   d. Based on this information, what is the source of the invalid read
+      and write errors?
+
+******************** Your answer below (5 points) ********************
+    Places where invalid read occurs contains some function having to do with
+    string manipulation. This leads me to believe that perhaps the strings 
+    provided to these functions are corrupt in some way (perhaps no '\0'?)
+    From the looks of it, malloc is incorrectly implemented. For example,
+    the author never multiplies by the sizeof(char) when allocating
+    data for a char array/string. (i.e. malloc in newMovie does
+    not multiply the length of string plus 1 by sizeof(char).)
+
+***********************************************************
+
+Given the knowledge gained from the previous question, correct these
+errors and then recompile and retest the program.  The invalid memory
+access errors should no longer occur.
+
+5. Run valgrind again. Notice that after the program output valgrind
+   reports two occurrences of "Invalid free()".
+
+   a. In what function do these errors occur, and how many times is
+      that function called from main()?
+
+******************** Your answer below (5 points) ********************
+    The error occurs in the function movieDelete() found in movie.c.
+    movieDelete() is called 6 times in main.
+    
+***********************************************************
+
+   b. How many times is free() called from inside that function itself
+      (i.e., not from any other functions it calls)?
+
+******************** Your answer below (5 points) ********************
+    The free() function itself is being called twice within the movieDelete()
+    function. 
+    
+***********************************************************
+
+   c. What fix is needed to eliminate the "Invalid free()" message?
+
+******************** Your answer below (5 points) ********************
+    To fix this error, we can do one of two things. We could either remove the
+    call to movieDelete in main on line 117 since at that point, movie1 has
+    already been deleted, or, we can set the pointers to title and director
+    to NULL and perform a check to make sure that they arent already freed
+    (aka are null) within the movieDelete function. Once we free those ptrs
+    we will set them to NULL as should be done after freeing a pointer and
+    as required by the newly implemented if checks within movieDelete. An 
+    extra check to make sure that the ptr to movie within movieDelete is not
+    null could also be added if the authors intend to ever delete the entire
+    movie struct within the program.
+
+***********************************************************
+
+Make the fix you described, re-build and re-run the program.  The "Invalid
+free" errors should no longer appear.
+
+6. In the "HEAP SUMMARY" section, there are number of error reports
+   regarding lost blocks of memory.
+
+   a. In which functions were the calls to malloc() made which allocated
+      the blocks that were lost, and what data items were they allocating
+      space for?
+
+******************** Your answer below (5 points) ********************
+    The functions within movie.c that are giving errors relating to lost data
+    and are also calling malloc are:
+        newMovie() - space for a movie struct
+        movieCopy() - space for a movie struct
+        movieToString() - final string of the movie struct in string format
+        
+***********************************************************
+
+   b. Examine the code to determine what you need to change to fix each
+      of the problems. Explain your solution.
+
+******************** Your answer below (5 points) ********************
+    Any time moveToString is called and a ptr is grabbed, the moment we finish
+    using that ptr and before we call malloc again, we should first free the
+    char ptr that grabbed the malloc'd ptr from moveToString. To do this I
+    put a "free( mstr )" right before the next instance where moveToString
+    was called again on that same variable. It's important to free that
+    memory before overwritting the ptr because if we dont, then the ptr will
+    be lost and that means we cant free that memory location (unless we
+    somehow guessed where the memory was held?)
+    
+    For newMovie and movieCopy, the ptrs are being overwritten which removes
+    the ability to free the struct itself. You could fix this in one of two
+    ways. You could free the movie ptr in main after calling movieDelete and
+    then set that movieptr to NULL or you could modify the movieDelete function
+    inside movie.c so free the provided movie struct ptr (given as an arg) if
+    it isnt NULL and then set it to NULL.
+***********************************************************
+
+   c. The memory allocated by these functions is returned by them to
+      the calling function; this effectively transfers the responsiblity
+      for deallocating the memory to the caller as well.  Where is the
+      most logical place for this memory to be deallocated?
+
+******************** Your answer below (5 points) ********************
+    The most logical place for this memory to be deallocated would be in the
+    same function in which the function was called. This is because the ptr
+    cant be freed within the function that returned the ptr because it already
+    returned the ptr! You cannot run code past a return statement, plus, if you
+    did free the ptr after returning, the final result would esentially be
+    nothing. This is why the function which gets the ptr returned from
+    another function has to free that ptrs memory when it finishes using it.
+    
+    This is the case for the mstr variable. A movie string is obtained,
+    printed and then free'd! For the movie struct, however, a specific
+    destructor function could be created to free the struct's values and then
+    itself.
+***********************************************************
+
+Make the necessary changes to the code to correct these final errors.
+At this point, if you did your work correctly, your program should run
+to completion with no memory management errors detected by valgrind.

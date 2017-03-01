@@ -1,0 +1,41 @@
+commit 12f1039c964ad665605870417c10d6ba580d50b0
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 21:29:45 2016 -0500
+
+    more try tweaking
+
+commit e63dd2b95f7e63d3e850dffdc36a5de672d6e397
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 21:23:24 2016 -0500
+
+    maybe fixed some try errors?
+
+commit a4c71ec1564cc872fbe437fe02173bfa868de510
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 20:39:40 2016 -0500
+
+    organized code and incorporated hiding
+
+commit c3b9ae9a37bab7bc58f30f580bdfc30ab1fca886
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 20:15:09 2016 -0500
+
+    project complete, off to xtra credit
+
+commit ac6a3a6002bdf8b686bab0c414dddfabed327dab
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 18:54:29 2016 -0500
+
+    fixed sequential printing
+
+commit 03bc03284fe8ec0dfffae624b759419ff9533802
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 17:13:06 2016 -0500
+
+    neighbor struct implemented
+
+commit f1633ff44b1ba67dcf6cc83044def4209dd07fb6
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Mon Feb 29 16:11:45 2016 -0500
+
+    can spread using structs!

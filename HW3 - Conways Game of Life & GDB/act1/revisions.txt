@@ -1,0 +1,11 @@
+commit 7552476a4c1dffe93553454998ce297931da3b6e
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:28:27 2016 -0500
+
+    replaced useless equality comparisons with intended assign symbol.
+
+commit e17454b0cf39f99223bede0ffdbe3561e2b99ebe
+Author: Douglas Gerard Gliner <dgg5503@cs.rit.edu>
+Date:   Thu Feb 11 22:19:15 2016 -0500
+
+    program no longer seg faults :D!

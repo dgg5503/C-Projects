@@ -1,0 +1,54 @@
+﻿Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+(gdb) display row
+1: row = 0
+(gdb) display col
+2: col = 0
+(gdb) display life[row][col]
+3: life[row][col] = -88 '\250'
+(gdb) continue 17
+Will ignore next 16 crossings of breakpoint 1.  Continuing.
+
+Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+3: life[row][col] = -25 '\347'
+2: col = 17
+1: row = 0
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+3: life[row][col] = -1 '\377'
+2: col = 18
+1: row = 0
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+3: life[row][col] = -1 '\377'
+2: col = 19
+1: row = 0
+(gdb) continue
+Continuing.
+▒Q▒▒8▒▒▒▒▒▒
+
+Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+3: life[row][col] = -1 '\377'
+2: col = 0
+1: row = 1
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:176
+176                                       printf("%c", life[row][col]);
+3: life[row][col] = 127 '\177'
+2: col = 1
+1: row = 1
+(gdb)
+
+
+Description & Cause
+At every point in the program that the author intended to set a value in the life matrix, they instead did a comparison operator (==). This occured on lines 55, 91, 128, 160, and 168!!!! The respective =='s were replaced with =.
